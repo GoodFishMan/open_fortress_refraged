@@ -1,0 +1,4 @@
+"LoadingBackgrounds"
+{
+	1	"loading/dm_backfort_widescreen"
+}
