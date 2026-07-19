@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"backpack/chest/nades"
+	"$translucent"		"1"
+}

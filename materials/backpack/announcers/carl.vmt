@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$basetexture"		"backpack/announcers/carl"
+	"$translucent"		"1"
+	"$ignorez" 1
+}
