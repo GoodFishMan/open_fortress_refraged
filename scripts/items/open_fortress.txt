@@ -11,7 +11,7 @@
 			"item_slot"					"secondary"
 			"show_in_armory"			"1"
 			"propername"				"0"
-			"item_name"					"#pistol"
+			"item_name"					"#TF_Weapon_pistol"
 			"item_description"			"Good? Bad? I'm the guy with the gun."
 			"item_type_name"			"#TF_Weapon_pistol"
 			"anim_slot"					"secondary"
@@ -20,6 +20,7 @@
 			"model_player"				"models/weapons/v_models/v_pistol_mercenary.mdl"
 			"attach_to_hands"			"2"
 			"item_quality"				"normal"
+			"baseitem"					"1"
 			"used_by_classes"
 			{
 				"soldier"				"1"
@@ -46,20 +47,6 @@
 				"sound_single_shot"		"Weapon_PistolDM.Single"
 				"sound_burst"			"Weapon_PistolDM.SingleCrit"
 				"sound_reload"			"Weapon_PistolDM.WorldReload"
-				"animation_replacement"
-				{
-					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_SMG1"
-					"ACT_MP_RELOAD_SECONDARY"	"ACT_HL2MP_RELOAD_SMG1"
-					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_SMG1"
-					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_SMG1"
-					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_SMG1"
-				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"			"ui/item_light_gun_drop.wav"
@@ -73,8 +60,8 @@
 			"item_slot"					"melee"
 			"show_in_armory"			"1"
 			"propername"				"0"
-			"item_name"					"#Crowbar"
-			"item_description"			"Good? Bad? I'm the guy with the gun."
+			"item_name"					"Crowbar"
+			"item_description"			"Break and enter"
 			"item_type_name"			"#TF_Weapon_melee"
 			"anim_slot"					"melee"
 			"image_inventory"			"backpack/weapons/w_models/w_pistol"
@@ -82,6 +69,7 @@
 			"model_player"				"models/weapons/v_models/v_crowbar_mercenary.mdl"
 			"attach_to_hands"			"2"
 			"item_quality"				"normal"
+			"baseitem"					"1"
 			"used_by_classes"
 			{
 				"soldier"				"1"
@@ -92,7 +80,18 @@
 				{
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"0.5"
-				}				
+				}	
+				"duck jumping"
+				{
+					"attribute_class"	"duck_jumping"
+					"value"				"1"
+				}
+				"auto jumping"
+				{
+					"attribute_class"	"auto_jumping"
+					"value"				"1"
+				}
+				
 			}
 			"static_attrs"
 			{
@@ -104,20 +103,6 @@
 				"sound_melee_hit"		"Weapon_Crowbar_TFC.HitFlesh"
 				"sound_melee_hit_world"	"Weapon_Crowbar_TFC.HitWorld"
 				"sound_burst"			"Weapon_Crowbar_TFC.MissCrit"
-				"animation_replacement"
-				{
-					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_SMG1"
-					"ACT_MP_RELOAD_SECONDARY"	"ACT_HL2MP_RELOAD_SMG1"
-					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_SMG1"
-					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_SMG1"
-					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_SMG1"
-				}
 			}
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"			"ui/item_light_gun_drop.wav"
@@ -133,7 +118,8 @@
 			"propername"				"0"
 			"item_name"					"#TF_Weapon_Shotgun"
 			"item_type_name"			"#TF_Weapon_Shotgun"
-			"anim_slot"					"secondary"
+			"item_description"			"If it ain't broke..."
+			"anim_slot"					"primary"
 			"model_world"				"models/weapons/w_models/w_shotgun.mdl"
 			"model_player"				"models/weapons/v_models/v_shotgun_merc.mdl"
 			"attach_to_hands"			"2"
@@ -153,23 +139,14 @@
 					"attribute_class"	"mod_use_custom_ammo_type"
 					"value"				"2"
 				}
+				"reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"				"0.8"
+				}
 			}
 			"visuals"
 			{
-				"animation_replacement"
-				{
-					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_SMG1"
-					"ACT_MP_RELOAD_SECONDARY"	"ACT_HL2MP_RELOAD_SMG1"
-					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_SMG1"
-					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_SMG1"
-					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_SMG1"
-				}
 			}
 			"image_inventory"		"backpack/weapons/w_models/w_shotgun"
 			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
@@ -185,14 +162,16 @@
 			"bucket"					"0"
 			"show_in_armory"			"1"
 			"propername"				"0"
-			"item_name"					"#TF_Weapon_Rifle"
-			"item_type_name"			"#TF_Weapon_Rifle"
+			"item_name"					"Assault Rifle"
+			"item_type_name"			"Assault Rifle"
+			"item_description"			"Burst Action"
 			"anim_slot"					"primary"
 			"image_inventory"			"backpack/weapons/w_models/w_pistol"
 			"model_world"				"models/weapons/w_models/w_assault_rifle.mdl"
 			"model_player"				"models/weapons/v_models/v_assault_rifle_dm.mdl"
 			"attach_to_hands"			"2"
 			"item_quality"				"normal"
+			"baseitem"					"1"
 			"used_by_classes"
 			{
 				"soldier"				"1"
@@ -223,11 +202,6 @@
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"3.0"
 				}
-				"fire rate penalty HIDDEN"
-				{
-					"attribute_class"	"mult_postfiredelay"
-					"value"				"3.0"
-				}
 				"damage bonus HIDDEN"
 				{
 					"attribute_class"	"mult_dmg"
@@ -238,6 +212,11 @@
 					"attribute_class"	"mod_use_custom_ammo_type"
 					"value"				"1"
 				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.5"
+				}
 			}
 			"visuals"
 			{
@@ -247,17 +226,16 @@
 			"sound_draw"			"Weapon_AR.BoltBack"
 				"animation_replacement"
 				{
-					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_SMG1"
-					"ACT_MP_RELOAD_SECONDARY"	"ACT_HL2MP_RELOAD_SMG1"
-					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_SMG1"
-					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_SMG1"
-					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_SMG1"
+					"ACT_MP_STAND_SECONDARY"			"ACT_MERC_STAND_ASSAULT_RIFLE"
+					"ACT_MP_RELOAD_STAND_SECONDARY"		"ACT_MERC_RELOAD_STAND_ASSAULT_RIFLE"
+					"ACT_MP_CROUCH_SECONDARY"			"ACT_MERC_CROUCH_ASSAULT_RIFLE"
+					"ACT_MP_RUN_SECONDARY"				"ACT_MERC_RUN_ASSAULT_RIFLE"
+					"ACT_MP_AIRWALK_SECONDARY"			"ACT_MERC_AIRWALK_ASSAULT_RIFLE"
+					"ACT_MP_CROUCHWALK_SECONDARY"		"ACT_MERC_CROUCHWALK_ASSAULT_RIFLE"
+					"ACT_MP_JUMP_SECONDARY"				"ACT_MERC_JUMP_ASSAULT_RIFLE"
+					"ACT_MP_JUMP_START_SECONDARY"		"ACT_MERC_JUMP_START_ASSAULT_RIFLE"
+					"ACT_MP_JUMP_FLOAT_SECONDARY"		"ACT_MERC_JUMP_FLOAT_ASSAULT_RIFLE"
+					"ACT_MP_SWIM_SECONDARY"				"ACT_MERC_SWIM_ASSAULT_RIFLE"
 				}
 			}
 			"image_inventory"		"backpack/weapons/w_models/w_shotgun"
@@ -276,7 +254,7 @@
 			"propername"				"0"
 			"item_name"					"#TF_Weapon_Revolver"
 			"item_type_name"			"#TF_Weapon_Revolver"
-			"item_description"			"#TF_Weapon_Revolver_Desc"
+			"item_description"			"Go ahead, make my day"
 			"anim_slot"					"secondary"
 			"image_inventory"			"backpack/weapons/w_models/w_pistol"
 			"model_player"				"models/weapons/v_models/v_revolver_dm.mdl"
@@ -298,6 +276,11 @@
 					"attribute_class"	"mod_use_custom_ammo_type"
 					"value"				"2"
 				}
+				"reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"				"0.8"
+				}
 			}
 			"visuals"
 			{
@@ -305,20 +288,6 @@
 			"sound_burst"			"Weapon_RevolverDM.SingleCrit"
 			"sound_reload"			"Weapon_RevolverDM.WorldReload"
 			"sound_draw"			"Weapon_Revolver.Draw"
-				"animation_replacement"
-				{
-					"ACT_MP_STAND_SECONDARY"	"ACT_HL2MP_IDLE_SMG1"
-					"ACT_MP_RELOAD_SECONDARY"	"ACT_HL2MP_RELOAD_SMG1"
-					"ACT_MP_CROUCH_SECONDARY"	"ACT_HL2MP_IDLE_CROUCH_SMG1"
-					"ACT_MP_RUN_SECONDARY"	"ACT_HL2MP_RUN_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_CROUCHWALK_SECONDARY"	"ACT_HL2MP_WALK_CROUCH_SMG1"
-					"ACT_MP_JUMP_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_START_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_JUMP_FLOAT_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_AIRWALK_SECONDARY"	"ACT_HL2MP_JUMP_SMG1"
-					"ACT_MP_SWIM_SECONDARY"	"ACT_HL2MP_SWIM_SMG1"
-				}
 			}
 			"image_inventory"		"backpack/weapons/w_models/w_shotgun"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"

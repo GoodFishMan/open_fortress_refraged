@@ -1,0 +1,9 @@
+"BackgroundMaps"
+{
+	1	"bg_harbor"
+	2	"bg_drizzle"
+	3	"bg_2bridge"
+	4	"bg_caper"
+	5	"bg_goldrush"
+	6	"bg_pelican"
+}

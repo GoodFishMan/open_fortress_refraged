@@ -208,10 +208,10 @@
 
 			"item_class"	"tf_weapon_shovel"
 			"item_slot"		"melee"
-			"baseitem"		"1"
+			"baseitem"		"0"
 			"used_by_classes"
 			{
-				"Soldier"	"1"
+
 			}
 
 			"model_player"		"models/weapons/v_models/v_shovel_soldier.mdl"
@@ -303,10 +303,10 @@
 
 			"prefab"		"weapon_shotgun"
 			"item_slot"		"secondary"
-			"baseitem"		"1"
+			"baseitem"		"0"
 			"used_by_classes"
 			{
-				"Soldier"	"1"
+
 			}
 		}
 		"11" // Shotgun (Heavy)
@@ -493,7 +493,7 @@
 
 			"item_class"	"tf_weapon_rocketlauncher"
 			"item_slot"		"primary"
-			"baseitem"		"1"
+			"baseitem"		"0"
 			"used_by_classes"
 			{
 				"Soldier"		"1"

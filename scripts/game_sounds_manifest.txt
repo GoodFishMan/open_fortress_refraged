@@ -6,7 +6,7 @@ game_sounds_manifest
 	"precache_file"  	"scripts/game_sounds_weapons_tf2c.txt"
 	"precache_file"  	"scripts/game_sounds_of.txt"
 	"precache_file"  	"scripts/game_sounds_weapons_of.txt"
-	"precache_file"  	"scripts/game_sounds_player_of.txt"
+	"precache_file"  	"scripts/game_sounds_vo_of.txt"
 	"precache_file"  	"scripts/game_sounds_weapons.txt"
 	"precache_file"  	"scripts/game_sounds_vo_tf2c.txt"
 	"precache_file"  	"scripts/game_sounds_vo.txt"

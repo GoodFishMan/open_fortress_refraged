@@ -7,6 +7,7 @@ Criterion "SoldierIsNotStillonFire" "SoldierOnFire" "!=1" "required" weight 0
 Criterion "SoldierIsStillonFire" "SoldierOnFire" "1" "required" weight 0
 Criterion "SoldierNotKillSpeech" "SoldierKillSpeech" "!=1" "required" weight 0
 Criterion "SoldierNotKillSpeechMelee" "SoldierKillSpeechMelee" "!=1" "required" weight 0
+Criterion "SoldierNotKillSpeechPistol" "SoldierKillSpeechPistol" "!=1" "required" weight 0
 Criterion "SoldierNotSaidHealThanks" "SoldierSaidHealThanks" "!=1" "required"
 Criterion "SoldierNotRobotNoises" "SoldierRobotNoises" "!=1" "required" weight 0
 Criterion "IsHelpCapSoldier" "SoldierHelpCap" "1" "required" weight 0
@@ -15,95 +16,6 @@ Criterion "SoldierNotAssistSpeech" "SoldierAssistSpeech" "!=1" "required" weight
 Criterion "SoldierNotInvulnerableSpeech" "SoldierInvulnerableSpeech" "!=1" "required" weight 0
 Criterion "SoldierNotAwardSpeech" "SoldierAwardSpeech" "!=1" "required" weight 0
 
-Response PlayerCloakedSpyDemomanSoldier
-{
-	scene "scenes/Player/Soldier/low/1082.vcd" 
-}
-Rule PlayerCloakedSpyDemomanSoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnDemoman
-	Response PlayerCloakedSpyDemomanSoldier
-}
-
-Response PlayerCloakedSpyEngineerSoldier
-{
-	scene "scenes/Player/Soldier/low/1087.vcd" 
-}
-Rule PlayerCloakedSpyEngineerSoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnEngineer
-	Response PlayerCloakedSpyEngineerSoldier
-}
-
-Response PlayerCloakedSpyHeavySoldier
-{
-	scene "scenes/Player/Soldier/low/1077.vcd" 
-}
-Rule PlayerCloakedSpyHeavySoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnHeavy
-	Response PlayerCloakedSpyHeavySoldier
-}
-
-Response PlayerCloakedSpyMedicSoldier
-{
-	scene "scenes/Player/Soldier/low/1085.vcd" 
-}
-Rule PlayerCloakedSpyMedicSoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnMedic
-	Response PlayerCloakedSpyMedicSoldier
-}
-
-Response PlayerCloakedSpyPyroSoldier
-{
-	scene "scenes/Player/Soldier/low/1080.vcd" 
-}
-Rule PlayerCloakedSpyPyroSoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnPyro
-	Response PlayerCloakedSpyPyroSoldier
-}
-
-Response PlayerCloakedSpyScoutSoldier
-{
-	scene "scenes/Player/Soldier/low/1074.vcd" 
-}
-Rule PlayerCloakedSpyScoutSoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnScout
-	Response PlayerCloakedSpyScoutSoldier
-}
-
-Response PlayerCloakedSpySniperSoldier
-{
-	scene "scenes/Player/Soldier/low/1090.vcd" 
-}
-Rule PlayerCloakedSpySniperSoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnSniper
-	Response PlayerCloakedSpySniperSoldier
-}
-
-Response PlayerCloakedSpySoldierSoldier
-{
-	scene "scenes/Player/Soldier/low/1075.vcd" 
-}
-Rule PlayerCloakedSpySoldierSoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnSoldier
-	Response PlayerCloakedSpySoldierSoldier
-}
-
-Response PlayerCloakedSpySpySoldier
-{
-	scene "scenes/Player/Soldier/low/1083.vcd" 
-}
-Rule PlayerCloakedSpySpySoldier
-{
-	criteria ConceptPlayerCloakedSpy IsSoldier IsOnSpy
-	Response PlayerCloakedSpySpySoldier
-}
 
 
 //--------------------------------------------------------------------------------------------------------------
@@ -111,9 +23,9 @@ Rule PlayerCloakedSpySpySoldier
 //--------------------------------------------------------------------------------------------------------------
 Response HealThanksSoldier
 {
-	scene "scenes/Player/Soldier/low/1213.vcd" 
-	scene "scenes/Player/Soldier/low/1214.vcd" 
-	scene "scenes/Player/Soldier/low/1215.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheHeal01.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheHeal02.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheHeal03.vcd" 
 }
 Rule HealThanksSoldier
 {
@@ -142,12 +54,12 @@ Rule AwardSoldier
 
 Response PlayerRoundStartSoldier
 {
-	scene "scenes/Player/Soldier/low/1055.vcd" predelay "1.0, 5.0"
-	scene "scenes/Player/Soldier/low/1057.vcd" predelay "1.0, 5.0"
-	scene "scenes/Player/Soldier/low/1058.vcd" predelay "1.0, 5.0"
-	scene "scenes/Player/Soldier/low/1059.vcd" predelay "1.0, 5.0"
-	scene "scenes/Player/Soldier/low/1056.vcd" predelay "1.0, 5.0"
-	scene "scenes/Player/Soldier/low/1060.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry01.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry02.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry03.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry04.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry05.vcd" predelay "1.0, 5.0"
+	scene "scenes/Player/Mercenary/low/BattleCry06.vcd" predelay "1.0, 5.0"
 }
 Rule PlayerRoundStartSoldier
 {
@@ -157,9 +69,9 @@ Rule PlayerRoundStartSoldier
 
 Response PlayerCappedIntelligenceSoldier
 {
-	scene "scenes/Player/Soldier/low/1046.vcd" 
-	scene "scenes/Player/Soldier/low/1048.vcd" 
-	scene "scenes/Player/Soldier/low/1047.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedIntelligence01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedIntelligence02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedIntelligence03.vcd" 
 }
 Rule PlayerCappedIntelligenceSoldier
 {
@@ -169,9 +81,9 @@ Rule PlayerCappedIntelligenceSoldier
 
 Response PlayerCapturedPointSoldier
 {
-	scene "scenes/Player/Soldier/low/1043.vcd" 
-	scene "scenes/Player/Soldier/low/1044.vcd" 
-	scene "scenes/Player/Soldier/low/1045.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedControlPoint01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedControlPoint02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoCappedControlPoint03.vcd" 
 }
 Rule PlayerCapturedPointSoldier
 {
@@ -181,18 +93,18 @@ Rule PlayerCapturedPointSoldier
 
 Response PlayerSuddenDeathSoldier
 {
-	scene "scenes/Player/Soldier/low/1120.vcd" 
-	scene "scenes/Player/Soldier/low/1121.vcd" 
-	scene "scenes/Player/Soldier/low/1122.vcd" 
-	scene "scenes/Player/Soldier/low/1123.vcd" 
-	scene "scenes/Player/Soldier/low/1124.vcd" 
-	scene "scenes/Player/Soldier/low/1125.vcd" 
-	scene "scenes/Player/Soldier/low/1126.vcd" 
-	scene "scenes/Player/Soldier/low/1127.vcd" 
-	scene "scenes/Player/Soldier/low/1128.vcd" 
-	scene "scenes/Player/Soldier/low/1129.vcd" 
-	scene "scenes/Player/Soldier/low/1130.vcd" 
-	scene "scenes/Player/Soldier/low/1131.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers01.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers02.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers03.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers04.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers05.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers06.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers07.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers08.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers09.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers10.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers11.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers12.vcd" 
 }
 Rule PlayerSuddenDeathSoldier
 {
@@ -202,9 +114,9 @@ Rule PlayerSuddenDeathSoldier
 
 Response PlayerStalemateSoldier
 {
-	scene "scenes/Player/Soldier/low/1049.vcd" 
-	scene "scenes/Player/Soldier/low/1050.vcd" 
-	scene "scenes/Player/Soldier/low/1051.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoDejectedTie01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoDejectedTie02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoDejectedTie03.vcd" 
 }
 Rule PlayerStalemateSoldier
 {
@@ -214,9 +126,9 @@ Rule PlayerStalemateSoldier
 
 Response PlayerTeleporterThanksSoldier
 {
-	scene "scenes/Player/Soldier/low/1216.vcd" 
-	scene "scenes/Player/Soldier/low/1217.vcd" 
-	scene "scenes/Player/Soldier/low/1218.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter01.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter02.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter03.vcd" 
 }
 Rule PlayerTeleporterThanksSoldier
 {
@@ -226,8 +138,9 @@ Rule PlayerTeleporterThanksSoldier
 
 Response PlayerJumpPadThanksSoldier
 {
-	scene "scenes/Player/Soldier/low/1216.vcd" 
-	scene "scenes/Player/Soldier/low/1218.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter01.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter02.vcd" 
+	scene "scenes/Player/Mercenary/low/ThanksForTheTeleporter03.vcd" 
 }
 Rule PlayerJumpPadThanksSoldier
 {
@@ -255,10 +168,11 @@ Rule DefendOnThePointSoldier
 
 Response KilledPlayerManySoldier
 {
-	scene "scenes/Player/Soldier/low/1181.vcd" 
-	scene "scenes/Player/Soldier/low/1356.vcd" 
-	scene "scenes/Player/Soldier/low/1197.vcd" 
-	scene "scenes/Player/Soldier/low/1199.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts02.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts04.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers01.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
 }
 Rule KilledPlayerManySoldier
 {
@@ -267,68 +181,14 @@ Rule KilledPlayerManySoldier
 	Response KilledPlayerManySoldier
 }
 
-Response KilledDemomanSoldier
-{
-	scene "scenes/Player/Soldier/low/3486.vcd" 
-	scene "scenes/Player/Soldier/low/3487.vcd" 
-	scene "scenes/Player/Soldier/low/3488.vcd" 
-	scene "scenes/Player/Soldier/low/3489.vcd" 
-	scene "scenes/Player/Soldier/low/3490.vcd" 
-	scene "scenes/Player/Soldier/low/3491.vcd" 
-}
-Rule KilledDemomanSoldier
-{
-	criterion ConceptKilledPlayer KilledPlayerDelay IsVictimDemoman 10PercentChance SoldierNotKillSpeech IsSoldier
-	ApplyContext "SoldierKillSpeech:1:10"
-	Response KilledDemomanSoldier
-}
-
-Response KilledPlayerAssistAutoSoldier
-{
-	scene "scenes/Player/Soldier/low/1186.vcd" predelay "2.5"
-}
-Rule KilledPlayerAssistAutoSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsBeingHealed IsManyRecentKills KilledPlayerDelay 20PercentChance SoldierNotAssistSpeech
-	ApplyContext "SoldierAssistSpeech:1:20"
-	Response KilledPlayerAssistAutoSoldier
-}
-
-// A custom rule for when you're on a pocket Soldier killing spree.
-Response SpreeMedicSoldier
-{
-	scene "scenes/Player/Soldier/low/3492.vcd"
-	scene "scenes/Player/Soldier/low/3493.vcd"
-	scene "scenes/Player/Soldier/low/3494.vcd"
-}
-Rule SpreeMedicSoldier
-{
-	criteria ConceptKilledPlayer KilledPlayerDelay IsSoldier IsBeingHealed SoldierNotKillSpeech IsVeryManyRecentKills IsWeaponPrimary
-	ApplyContext "SoldierKillSpeech:1:20"
-	Response SpreeMedicSoldier
-}
-
-// Custom Medic follow - because Soldier needs it more than most classes.
-Response MedicFollowSoldier
-{
-	scene "scenes/Player/Soldier/low/3495.vcd" predelay ".25"
-	scene "scenes/Player/Soldier/low/3496.vcd" predelay ".25"
-	scene "scenes/Player/Soldier/low/3497.vcd" predelay ".25"
-	scene "scenes/Player/Soldier/low/3499.vcd" predelay ".25"
-}
-Rule MedicFollowSoldier
-{
-	criteria ConceptPlayerMedic IsOnMedic IsSoldier IsNotCrossHairEnemy NotLowHealth SoldierIsNotStillonFire
-	ApplyContext "ScoutKillSpeech:1:10"
-	Response MedicFollowSoldier
-}
-
 Response SoldierJarateHit
 {
-	scene "scenes/Player/Soldier/low/1051.vcd"
-	scene "scenes/Player/Soldier/low/1155.vcd"
-	scene "scenes/Player/Soldier/low/1353.vcd"
-	scene "scenes/Player/Soldier/low/1152.vcd"
+	scene "scenes/Player/Mercenary/low/NegativeVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization04.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization05.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization06.vcd" 
 }
 Rule SoldierJarateHit
 {
@@ -339,13 +199,10 @@ Rule SoldierJarateHit
 // Invulnerable lines
 Response InvulnerableSpeechSoldier
 {
-	scene "scenes/Player/Soldier/low/1191.vcd"
-	scene "scenes/Player/Soldier/low/1194.vcd"
-	scene "scenes/Player/Soldier/low/1200.vcd"
-	scene "scenes/Player/Soldier/low/1204.vcd"
-	scene "scenes/Player/Soldier/low/1192.vcd"
-	scene "scenes/Player/Soldier/low/1189.vcd"
-	scene "scenes/Player/Soldier/low/1201.vcd"
+	scene "scenes/Player/Mercenary/low/Berserk01.vcd" 
+	scene "scenes/Player/Mercenary/low/Berserk02.vcd" 
+	scene "scenes/Player/Mercenary/low/Berserk03.vcd" 
+	scene "scenes/Player/Mercenary/low/Berserk04.vcd" 
 }
 Rule InvulnerableSpeechSoldier
 {
@@ -359,10 +216,9 @@ Rule InvulnerableSpeechSoldier
 // Added the unused Direct Hit screams here, as they can't be added to the taunt.
 Response KilledPlayerMeleeSoldier
 {
-	scene "scenes/Player/Soldier/low/1185.vcd" 
-	scene "scenes/Player/Soldier/low/3403.vcd" 
-	scene "scenes/Player/Soldier/low/3405.vcd" 
-	scene "scenes/Player/Soldier/low/3406.vcd" 
+	scene "scenes/Player/Mercenary/low/SpecialCompleted05.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts02.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts04.vcd" 
 }
 Rule KilledPlayerMeleeSoldier
 {
@@ -370,11 +226,26 @@ Rule KilledPlayerMeleeSoldier
 	ApplyContext "SoldierKillSpeechMelee:1:10"
 	Response KilledPlayerMeleeSoldier
 }
+// OPEN FORTRESS //
+Response KilledPlayerPistolSoldier
+{
+	scene "scenes/Player/Mercenary/low/Taunts01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts02.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts03.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
+}
+Rule KilledPlayerPistolSoldier
+{
+	criteria ConceptKilledPlayer KilledPlayerDelay 30PercentChance  WeaponIsPistolScout SoldierNotKillSpeechPistol IsSoldier
+	ApplyContext "SoldierKillSpeechPistol:1:10"
+	Response KilledPlayerPistolSoldier
+}
+// END FORTRESS //
 
 Response KilledPlayerVeryManySoldier
 {
-	scene "scenes/Player/Soldier/low/1206.vcd" 
-	scene "scenes/Player/Soldier/low/1188.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughEvil01.vcd" 
 }
 Rule KilledPlayerVeryManySoldier
 {
@@ -385,9 +256,9 @@ Rule KilledPlayerVeryManySoldier
 
 Response PlayerKilledCapperSoldier
 {
-	scene "scenes/Player/Soldier/low/1064.vcd" 
-	scene "scenes/Player/Soldier/low/1062.vcd" 
-	scene "scenes/Player/Soldier/low/1063.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers04.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
 }
 Rule PlayerKilledCapperSoldier
 {
@@ -398,16 +269,15 @@ Rule PlayerKilledCapperSoldier
 
 Response PlayerKilledDominatingSoldier
 {
-	scene "scenes/Player/Soldier/low/1132.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1346.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1348.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1133.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1134.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1347.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1135.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1349.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1195.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1202.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/LaughEvil01.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/LaughEvil02.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/LaughHappy01.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination01.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination02.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination03.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination04.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination05.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Domination06.vcd" predelay "2.5"
 }
 Rule PlayerKilledDominatingSoldier
 {
@@ -417,201 +287,11 @@ Rule PlayerKilledDominatingSoldier
 	Response PlayerKilledDominatingSoldier
 }
 
-Response PlayerKilledDominatingCivilianSoldier
-{
-	scene "scenes/Player/Soldier/low/3447.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3454.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3462.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3464.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3469.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3470.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingCivilianSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimCivilian
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingCivilianSoldier
-}
-
-Response PlayerKilledDominatingDemomanSoldier
-{
-	scene "scenes/Player/Soldier/low/3407.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3408.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3409.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3410.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3411.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3412.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingDemomanSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimDemoman
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingDemomanSoldier
-}
-
-Response PlayerKilledDominatingEngineerSoldier
-{
-	scene "scenes/Player/Soldier/low/3418.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3419.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3420.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3421.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3422.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3423.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingEngineerSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimEngineer
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingEngineerSoldier
-}
-
-Response PlayerKilledDominatingHeavySoldier
-{
-	scene "scenes/Player/Soldier/low/3424.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3425.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3426.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3427.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3428.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3429.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3430.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingHeavySoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimHeavy
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingHeavySoldier
-}
-
-Response PlayerKilledDominatingMedicSoldier
-{
-	scene "scenes/Player/Soldier/low/3431.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3432.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3433.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3434.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3435.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3436.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3437.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingMedicSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimMedic
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingMedicSoldier
-}
-
-Response PlayerKilledDominatingPyroSoldier
-{
-	scene "scenes/Player/Soldier/low/3438.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3439.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3440.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3441.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3442.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3443.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3444.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3445.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3446.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingPyroSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimPyro
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingPyroSoldier
-}
-
-Response PlayerKilledDominatingScoutSoldier
-{
-	scene "scenes/Player/Soldier/low/3447.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3448.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3449.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3450.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3451.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3452.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3453.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3454.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3455.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3456.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3457.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingScoutSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimScout
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingScoutSoldier
-}
-
-Response PlayerKilledDominatingSniperSoldier
-{
-	scene "scenes/Player/Soldier/low/3458.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3459.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3460.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3461.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3462.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3463.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3464.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3465.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3466.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3467.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3468.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3469.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3470.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3471.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingSniperSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimSniper
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingSniperSoldier
-}
-
-Response PlayerKilledDominatingSoldierSoldier
-{
-	scene "scenes/Player/Soldier/low/3472.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3473.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3474.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3475.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3476.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3477.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingSoldierSoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimSoldier
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingSoldierSoldier
-}
-
-Response PlayerKilledDominatingSpySoldier
-{
-	scene "scenes/Player/Soldier/low/3478.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3479.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3480.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3481.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3482.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3483.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3484.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/3485.vcd" predelay "2.5"
-}
-Rule PlayerKilledDominatingSpySoldier
-{
-	criteria ConceptKilledPlayer IsSoldier IsDominated  IsVictimSpy
-	ApplyContext "SoldierKillSpeech:1:10"
-	ApplyContext "IsDominating:1:10"
-	Response PlayerKilledDominatingSpySoldier
-}
-
 Response PlayerKilledForRevengeSoldier
 {
-	scene "scenes/Player/Soldier/low/1060.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1065.vcd" predelay "2.5"
-	scene "scenes/Player/Soldier/low/1096.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Revenge01.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Revenge02.vcd" predelay "2.5"
+	scene "scenes/Player/Mercenary/low/Revenge03.vcd" predelay "2.5"
 }
 Rule PlayerKilledForRevengeSoldier
 {
@@ -623,11 +303,11 @@ Rule PlayerKilledForRevengeSoldier
 
 Response PlayerKilledObjectSoldier
 {
-	scene "scenes/Player/Soldier/low/1055.vcd" 
-	scene "scenes/Player/Soldier/low/1345.vcd" 
-	scene "scenes/Player/Soldier/low/1172.vcd" 
-	scene "scenes/Player/Soldier/low/1175.vcd" 
-	scene "scenes/Player/Soldier/low/1182.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry01.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
 }
 Rule PlayerKilledObjectSoldier
 {
@@ -642,12 +322,12 @@ Rule PlayerKilledObjectSoldier
 //--------------------------------------------------------------------------------------------------------------
 Response PlayerAttackerPainSoldier
 {
-	scene "scenes/Player/Soldier/low/1165.vcd" 
-	scene "scenes/Player/Soldier/low/1166.vcd" 
-	scene "scenes/Player/Soldier/low/1167.vcd" 
-	scene "scenes/Player/Soldier/low/1371.vcd" 
-	scene "scenes/Player/Soldier/low/1372.vcd" 
-	scene "scenes/Player/Soldier/low/1373.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere01.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere02.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere03.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere04.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere05.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSevere06.vcd" 
 }
 Rule PlayerAttackerPainSoldier
 {
@@ -657,7 +337,9 @@ Rule PlayerAttackerPainSoldier
 
 Response PlayerOnFireSoldier
 {
-	scene "scenes/Player/Soldier/low/1052.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoOnFire01.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoOnFire02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoOnFire03.vcd" 
 }
 Rule PlayerOnFireSoldier
 {
@@ -668,8 +350,8 @@ Rule PlayerOnFireSoldier
 
 Response PlayerOnFireRareSoldier
 {
-	scene "scenes/Player/Soldier/low/1053.vcd" 
-	scene "scenes/Player/Soldier/low/1054.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoOnFire02.vcd" 
+	scene "scenes/Player/Mercenary/low/AutoOnFire03.vcd" 
 }
 Rule PlayerOnFireRareSoldier
 {
@@ -680,14 +362,14 @@ Rule PlayerOnFireRareSoldier
 
 Response PlayerPainSoldier
 {
-	scene "scenes/Player/Soldier/low/1168.vcd" 
-	scene "scenes/Player/Soldier/low/1169.vcd" 
-	scene "scenes/Player/Soldier/low/1170.vcd" 
-	scene "scenes/Player/Soldier/low/1374.vcd" 
-	scene "scenes/Player/Soldier/low/1375.vcd" 
-	scene "scenes/Player/Soldier/low/1376.vcd" 
-	scene "scenes/Player/Soldier/low/1377.vcd" 
-	scene "scenes/Player/Soldier/low/1378.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp01.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp02.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp03.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp04.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp05.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp06.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp07.vcd" 
+	scene "scenes/Player/Mercenary/low/PainSharp08.vcd" 
 }
 Rule PlayerPainSoldier
 {
@@ -697,7 +379,7 @@ Rule PlayerPainSoldier
 
 Response PlayerStillOnFireSoldier
 {
-	scene "scenes/Player/Soldier/low/1926.vcd" 
+	scene "scenes/Player/Mercenary/low/autoonfiresecondary01.vcd" 
 }
 Rule PlayerStillOnFireSoldier
 {
@@ -710,52 +392,6 @@ Rule PlayerStillOnFireSoldier
 //--------------------------------------------------------------------------------------------------------------
 // Duel Speech
 //--------------------------------------------------------------------------------------------------------------
-Response AcceptedDuelSoldier
-{
-	scene "scenes/Player/Soldier/low/1062.vcd" 
-	scene "scenes/Player/Soldier/low/1172.vcd" 
-	scene "scenes/Player/Soldier/low/1175.vcd" 
-	scene "scenes/Player/Soldier/low/1174.vcd" 
-	scene "scenes/Player/Soldier/low/1190.vcd" 
-	scene "scenes/Player/Soldier/low/1221.vcd" 
-}
-Rule AcceptedDuelSoldier
-{
-	criteria ConceptIAcceptDuel IsSoldier
-	Response AcceptedDuelSoldier
-}
-
-Response MeleeDareSoldier
-{
-	scene "scenes/Player/Soldier/low/1094.vcd" 
-	scene "scenes/Player/Soldier/low/1188.vcd" 
-	scene "scenes/Player/Soldier/low/1195.vcd" 
-	scene "scenes/Player/Soldier/low/1196.vcd" 
-	scene "scenes/Player/Soldier/low/1202.vcd" 
-	scene "scenes/Player/Soldier/low/1210.vcd" 
-}
-Rule MeleeDareSoldier
-{
-	criteria ConceptRequestDuel IsSoldier
-	Response MeleeDareSoldier
-}
-Rule ChargeDeployedSoldier
-{
-	criteria ConceptChargeDeployed IsSoldier
-	Response InvulnerableSpeechSoldier
-}
-
-Response RejectedDuelSoldier
-{
-	scene "scenes/Player/Soldier/low/3487.vcd" 
-	scene "scenes/Player/Soldier/low/1120.vcd" 
-	scene "scenes/Player/Soldier/low/1207.vcd" 
-}
-Rule RejectedDuelSoldier
-{
-	criteria ConceptDuelRejected IsSoldier
-	Response RejectedDuelSoldier
-}
 
 
 //--------------------------------------------------------------------------------------------------------------
@@ -763,10 +399,10 @@ Rule RejectedDuelSoldier
 //--------------------------------------------------------------------------------------------------------------
 Response PlayerGoSoldier
 {
-	scene "scenes/player/mercenary/low/go01.vcd" 
-	scene "scenes/player/mercenary/low/go02.vcd" 
-	scene "scenes/player/mercenary/low/go03.vcd" 
-	scene "scenes/player/mercenary/low/go04.vcd" 
+	scene "scenes/Player/Mercenary/low/Go01.vcd" 
+	scene "scenes/Player/Mercenary/low/Go02.vcd" 
+	scene "scenes/Player/Mercenary/low/Go03.vcd" 
+	scene "scenes/Player/Mercenary/low/Go04.vcd" 
 }
 Rule PlayerGoSoldier
 {
@@ -776,9 +412,9 @@ Rule PlayerGoSoldier
 
 Response PlayerHeadLeftSoldier
 {
-	scene "scenes/Player/Soldier/low/1098.vcd" 
-	scene "scenes/Player/Soldier/low/1100.vcd" 
-	scene "scenes/Player/Soldier/low/1099.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadLeft01.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadLeft02.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadLeft03.vcd" 
 }
 Rule PlayerHeadLeftSoldier
 {
@@ -788,9 +424,9 @@ Rule PlayerHeadLeftSoldier
 
 Response PlayerHeadRightSoldier
 {
-	scene "scenes/Player/Soldier/low/1103.vcd" 
-	scene "scenes/Player/Soldier/low/1101.vcd" 
-	scene "scenes/Player/Soldier/low/1102.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadRight01.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadRight02.vcd" 
+	scene "scenes/Player/Mercenary/low/HeadRight03.vcd" 
 }
 Rule PlayerHeadRightSoldier
 {
@@ -800,9 +436,9 @@ Rule PlayerHeadRightSoldier
 
 Response PlayerHelpSoldier
 {
-	scene "scenes/Player/Soldier/low/1104.vcd" 
-	scene "scenes/Player/Soldier/low/1105.vcd" 
-	scene "scenes/Player/Soldier/low/1106.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMe01.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMe02.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMe03.vcd" 
 }
 Rule PlayerHelpSoldier
 {
@@ -812,9 +448,9 @@ Rule PlayerHelpSoldier
 
 Response PlayerHelpCaptureSoldier
 {
-	scene "scenes/Player/Soldier/low/1109.vcd" 
-	scene "scenes/Player/Soldier/low/1107.vcd" 
-	scene "scenes/Player/Soldier/low/1108.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeCapture01.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeCapture02.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeCapture03.vcd" 
 }
 Rule PlayerHelpCaptureSoldier
 {
@@ -825,9 +461,9 @@ Rule PlayerHelpCaptureSoldier
 
 Response PlayerHelpCapture2Soldier
 {
-	scene "scenes/Player/Soldier/low/1187.vcd" 
-	scene "scenes/Player/Soldier/low/1354.vcd" 
-	scene "scenes/Player/Soldier/low/1355.vcd" 
+	scene "scenes/Player/Mercenary/low/StandOnThePoint01.vcd" 
+	scene "scenes/Player/Mercenary/low/StandOnThePoint02.vcd" 
+	scene "scenes/Player/Mercenary/low/StandOnThePoint03.vcd" 
 }
 Rule PlayerHelpCapture2Soldier
 {
@@ -837,10 +473,10 @@ Rule PlayerHelpCapture2Soldier
 
 Response PlayerHelpDefendSoldier
 {
-	scene "scenes/Player/Soldier/low/1110.vcd" 
-	scene "scenes/Player/Soldier/low/1111.vcd" 
-	scene "scenes/Player/Soldier/low/1112.vcd" 
-	scene "scenes/Player/Soldier/low/1113.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeDefend01.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeDefend02.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeDefend03.vcd" 
+	scene "scenes/Player/Mercenary/low/HelpMeDefend04.vcd" 
 }
 Rule PlayerHelpDefendSoldier
 {
@@ -850,9 +486,9 @@ Rule PlayerHelpDefendSoldier
 
 Response PlayerMedicSoldier
 {
-	scene "scenes/Player/Soldier/low/1139.vcd" 
-	scene "scenes/Player/Soldier/low/1140.vcd" 
-	scene "scenes/Player/Soldier/low/1141.vcd" 
+	scene "scenes/Player/Mercenary/low/Medic01.vcd" 
+	scene "scenes/Player/Mercenary/low/Medic02.vcd" 
+	scene "scenes/Player/Mercenary/low/Medic03.vcd" 
 }
 Rule PlayerMedicSoldier
 {
@@ -860,23 +496,11 @@ Rule PlayerMedicSoldier
 	Response PlayerMedicSoldier
 }
 
-Response PlayerAskForBallSoldier
-{
-	scene "scenes/Player/Soldier/low/1139.vcd" 
-	scene "scenes/Player/Soldier/low/1140.vcd" 
-	scene "scenes/Player/Soldier/low/1141.vcd" 
-}
-Rule PlayerAskForBallSoldier
-{
-	criteria ConceptPlayerAskForBall IsSoldier
-	Response PlayerAskForBallSoldier
-}
-
 Response PlayerMoveUpSoldier
 {
-	scene "scenes/Player/Soldier/low/1142.vcd" 
-	scene "scenes/Player/Soldier/low/1143.vcd" 
-	scene "scenes/Player/Soldier/low/1144.vcd" 
+	scene "scenes/Player/Mercenary/low/MoveUp01.vcd" 
+	scene "scenes/Player/Mercenary/low/MoveUp02.vcd" 
+	scene "scenes/Player/Mercenary/low/MoveUp03.vcd" 
 }
 Rule PlayerMoveUpSoldier
 {
@@ -886,9 +510,9 @@ Rule PlayerMoveUpSoldier
 
 Response PlayerNoSoldier
 {
-	scene "scenes/Player/Soldier/low/1159.vcd" 
-	scene "scenes/Player/Soldier/low/1161.vcd" 
-	scene "scenes/Player/Soldier/low/1160.vcd" 
+	scene "scenes/Player/Mercenary/low/No01.vcd" 
+	scene "scenes/Player/Mercenary/low/No02.vcd" 
+	scene "scenes/Player/Mercenary/low/No03.vcd" 
 }
 Rule PlayerNoSoldier
 {
@@ -898,8 +522,8 @@ Rule PlayerNoSoldier
 
 Response PlayerThanksSoldier
 {
-	scene "scenes/Player/Soldier/low/1211.vcd" 
-	scene "scenes/Player/Soldier/low/1212.vcd" 
+	scene "scenes/Player/Mercenary/low/Thanks01.vcd" 
+	scene "scenes/Player/Mercenary/low/Thanks02.vcd" 
 }
 Rule PlayerThanksSoldier
 {
@@ -913,7 +537,9 @@ Rule PlayerThanksSoldier
 
 Response KilledPlayerAssistSoldier
 {
-	scene "scenes/Player/Soldier/low/1186.vcd"
+	scene "scenes/Player/Soldier/low/1095.vcd" 
+	scene "scenes/Player/Soldier/low/1096.vcd" 
+	scene "scenes/Player/Soldier/low/1097.vcd" 
 }
 Rule KilledPlayerAssistSoldier
 {
@@ -925,10 +551,10 @@ Rule KilledPlayerAssistSoldier
 
 Response PlayerYesSoldier
 {
-	scene "scenes/Player/Soldier/low/1350.vcd" 
-	scene "scenes/Player/Soldier/low/1220.vcd" 
-	scene "scenes/Player/Soldier/low/1221.vcd" 
-	scene "scenes/Player/Soldier/low/1219.vcd" 
+	scene "scenes/Player/Mercenary/low/Yes01.vcd" 
+	scene "scenes/Player/Mercenary/low/Yes02.vcd" 
+	scene "scenes/Player/Mercenary/low/Yes03.vcd" 
+	scene "scenes/Player/Mercenary/low/Yes04.vcd" 
 }
 Rule PlayerYesSoldier
 {
@@ -942,9 +568,9 @@ Rule PlayerYesSoldier
 //--------------------------------------------------------------------------------------------------------------
 Response PlayerActivateChargeSoldier
 {
-	scene "scenes/Player/Soldier/low/1040.vcd" 
-	scene "scenes/Player/Soldier/low/1041.vcd" 
-	scene "scenes/Player/Soldier/low/1042.vcd" 
+	scene "scenes/Player/Mercenary/low/ActivateCharge01.vcd" 
+	scene "scenes/Player/Mercenary/low/ActivateCharge02.vcd" 
+	scene "scenes/Player/Mercenary/low/ActivateCharge03.vcd" 
 }
 Rule PlayerActivateChargeSoldier
 {
@@ -954,9 +580,10 @@ Rule PlayerActivateChargeSoldier
 
 Response PlayerCloakedSpySoldier
 {
-	scene "scenes/Player/Soldier/low/1071.vcd" 
-	scene "scenes/Player/Soldier/low/1072.vcd" 
-	scene "scenes/Player/Soldier/low/1070.vcd" 
+	scene "scenes/Player/Mercenary/low/CloakedSpy01.vcd" 
+	scene "scenes/Player/Mercenary/low/CloakedSpy02.vcd" 
+	scene "scenes/Player/Mercenary/low/CloakedSpy03.vcd" 
+	scene "scenes/Player/Mercenary/low/CloakedSpy04.vcd" 
 }
 Rule PlayerCloakedSpySoldier
 {
@@ -966,7 +593,7 @@ Rule PlayerCloakedSpySoldier
 
 Response PlayerDispenserHereSoldier
 {
-	scene "scenes/Player/Soldier/low/1146.vcd" 
+	scene "scenes/Player/Mercenary/low/NeedDispenser01.vcd" 
 }
 Rule PlayerDispenserHereSoldier
 {
@@ -976,7 +603,10 @@ Rule PlayerDispenserHereSoldier
 
 Response PlayerIncomingSoldier
 {
-	scene "scenes/Player/Soldier/low/1114.vcd" 
+	scene "scenes/Player/Mercenary/low/Incoming01.vcd" 
+	scene "scenes/Player/Mercenary/low/Incoming02.vcd" 
+	scene "scenes/Player/Mercenary/low/Incoming03.vcd" 
+	scene "scenes/Player/Mercenary/low/Incoming04.vcd" 
 }
 Rule PlayerIncomingSoldier
 {
@@ -986,9 +616,9 @@ Rule PlayerIncomingSoldier
 
 Response PlayerSentryAheadSoldier
 {
-	scene "scenes/Player/Soldier/low/1177.vcd" 
-	scene "scenes/Player/Soldier/low/1178.vcd" 
-	scene "scenes/Player/Soldier/low/1176.vcd" 
+	scene "scenes/Player/Mercenary/low/SentryAhead01.vcd" 
+	scene "scenes/Player/Mercenary/low/SentryAhead02.vcd" 
+	scene "scenes/Player/Mercenary/low/SentryAhead03.vcd" 
 }
 Rule PlayerSentryAheadSoldier
 {
@@ -998,7 +628,7 @@ Rule PlayerSentryAheadSoldier
 
 Response PlayerSentryHereSoldier
 {
-	scene "scenes/Player/Soldier/low/1148.vcd" 
+	scene "scenes/Player/Mercenary/low/NeedSentry01.vcd" 
 }
 Rule PlayerSentryHereSoldier
 {
@@ -1008,7 +638,7 @@ Rule PlayerSentryHereSoldier
 
 Response PlayerTeleporterHereSoldier
 {
-	scene "scenes/Player/Soldier/low/1150.vcd" 
+	scene "scenes/Player/Mercenary/low/NeedTeleporter01.vcd" 
 }
 Rule PlayerTeleporterHereSoldier
 {
@@ -1022,12 +652,12 @@ Rule PlayerTeleporterHereSoldier
 //--------------------------------------------------------------------------------------------------------------
 Response PlayerBattleCrySoldier
 {
-	scene "scenes/Player/Soldier/low/1055.vcd" 
-	scene "scenes/Player/Soldier/low/1057.vcd" 
-	scene "scenes/Player/Soldier/low/1058.vcd" 
-	scene "scenes/Player/Soldier/low/1059.vcd" 
-	scene "scenes/Player/Soldier/low/1056.vcd" 
-	scene "scenes/Player/Soldier/low/1060.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry01.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry02.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry03.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry04.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry05.vcd" 
+	scene "scenes/Player/Mercenary/low/BattleCry06.vcd" 
 }
 Rule PlayerBattleCrySoldier
 {
@@ -1039,12 +669,11 @@ Rule PlayerBattleCrySoldier
 // Look at enemy, then do battle cry voice command while holding a melee weapon.
 Response MeleeDareCombatSoldier
 {
-	scene "scenes/Player/Soldier/low/1196.vcd"
-	scene "scenes/Player/Soldier/low/1210.vcd"
-	scene "scenes/Player/Soldier/low/1205.vcd"
-	scene "scenes/Player/Soldier/low/1208.vcd"
-	scene "scenes/Player/Soldier/low/1203.vcd"
-	scene "scenes/Player/Soldier/low/1190.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts01.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts02.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts03.vcd" 
+	scene "scenes/Player/Mercenary/low/Taunts05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
 }
 Rule MeleeDareCombatSoldier
 {
@@ -1055,12 +684,12 @@ Rule MeleeDareCombatSoldier
 
 Response PlayerCheersSoldier
 {
-	scene "scenes/Player/Soldier/low/1065.vcd" 
-	scene "scenes/Player/Soldier/low/1068.vcd" 
-	scene "scenes/Player/Soldier/low/1066.vcd" 
-	scene "scenes/Player/Soldier/low/1064.vcd" 
-	scene "scenes/Player/Soldier/low/1062.vcd" 
-	scene "scenes/Player/Soldier/low/1063.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers01.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers02.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers03.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers04.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers05.vcd" 
+	scene "scenes/Player/Mercenary/low/Cheers06.vcd" 
 }
 Rule PlayerCheersSoldier
 {
@@ -1070,9 +699,9 @@ Rule PlayerCheersSoldier
 
 Response PlayerGoodJobSoldier
 {
-	scene "scenes/Player/Soldier/low/1095.vcd" 
-	scene "scenes/Player/Soldier/low/1096.vcd" 
-	scene "scenes/Player/Soldier/low/1097.vcd" 
+	scene "scenes/Player/Mercenary/low/GoodJob01.vcd" 
+	scene "scenes/Player/Mercenary/low/GoodJob02.vcd" 
+	scene "scenes/Player/Mercenary/low/GoodJob03.vcd" 
 }
 Rule PlayerGoodJobSoldier
 {
@@ -1082,18 +711,18 @@ Rule PlayerGoodJobSoldier
 
 Response PlayerJeersSoldier
 {
-	scene "scenes/Player/Soldier/low/1120.vcd" 
-	scene "scenes/Player/Soldier/low/1121.vcd" 
-	scene "scenes/Player/Soldier/low/1122.vcd" 
-	scene "scenes/Player/Soldier/low/1123.vcd" 
-	scene "scenes/Player/Soldier/low/1124.vcd" 
-	scene "scenes/Player/Soldier/low/1125.vcd" 
-	scene "scenes/Player/Soldier/low/1126.vcd" 
-	scene "scenes/Player/Soldier/low/1127.vcd" 
-	scene "scenes/Player/Soldier/low/1128.vcd" 
-	scene "scenes/Player/Soldier/low/1129.vcd" 
-	scene "scenes/Player/Soldier/low/1130.vcd" 
-	scene "scenes/Player/Soldier/low/1131.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers01.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers02.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers03.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers04.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers05.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers06.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers07.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers08.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers09.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers10.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers11.vcd" 
+	scene "scenes/Player/Mercenary/low/Jeers12.vcd" 
 }
 Rule PlayerJeersSoldier
 {
@@ -1103,12 +732,12 @@ Rule PlayerJeersSoldier
 
 Response PlayerLostPointSoldier
 {
-	scene "scenes/Player/Soldier/low/1151.vcd" 
-	scene "scenes/Player/Soldier/low/1152.vcd" 
-	scene "scenes/Player/Soldier/low/1153.vcd" 
-	scene "scenes/Player/Soldier/low/1154.vcd" 
-	scene "scenes/Player/Soldier/low/1155.vcd" 
-	scene "scenes/Player/Soldier/low/1353.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization04.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization05.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization06.vcd" 
 }
 Rule PlayerLostPointSoldier
 {
@@ -1118,12 +747,12 @@ Rule PlayerLostPointSoldier
 
 Response PlayerNegativeSoldier
 {
-	scene "scenes/Player/Soldier/low/1151.vcd" 
-	scene "scenes/Player/Soldier/low/1152.vcd" 
-	scene "scenes/Player/Soldier/low/1153.vcd" 
-	scene "scenes/Player/Soldier/low/1154.vcd" 
-	scene "scenes/Player/Soldier/low/1155.vcd" 
-	scene "scenes/Player/Soldier/low/1353.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization04.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization05.vcd" 
+	scene "scenes/Player/Mercenary/low/NegativeVocalization06.vcd" 
 }
 Rule PlayerNegativeSoldier
 {
@@ -1133,9 +762,9 @@ Rule PlayerNegativeSoldier
 
 Response PlayerNiceShotSoldier
 {
-	scene "scenes/Player/Soldier/low/1156.vcd" 
-	scene "scenes/Player/Soldier/low/1157.vcd" 
-	scene "scenes/Player/Soldier/low/1158.vcd" 
+	scene "scenes/Player/Mercenary/low/NiceShot01.vcd" 
+	scene "scenes/Player/Mercenary/low/NiceShot02.vcd" 
+	scene "scenes/Player/Mercenary/low/NiceShot03.vcd" 
 }
 Rule PlayerNiceShotSoldier
 {
@@ -1145,20 +774,20 @@ Rule PlayerNiceShotSoldier
 
 Response PlayerPositiveSoldier
 {
-	scene "scenes/Player/Soldier/low/1345.vcd" 
-	scene "scenes/Player/Soldier/low/1172.vcd" 
-	scene "scenes/Player/Soldier/low/1175.vcd" 
-	scene "scenes/Player/Soldier/low/1174.vcd" 
-	scene "scenes/Player/Soldier/low/1171.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization01.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization02.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization03.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization04.vcd" 
+	scene "scenes/Player/Mercenary/low/PositiveVocalization05.vcd" 
 }
 
 Response PlayerTauntsSoldier
 {
-	scene "scenes/Player/Soldier/low/1136.vcd" 
-	scene "scenes/Player/Soldier/low/1137.vcd" 
-	scene "scenes/Player/Soldier/low/1138.vcd" 
-	scene "scenes/Player/Soldier/low/1351.vcd" 
-	scene "scenes/Player/Soldier/low/1352.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughLong02.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughShort01.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughShort02.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughShort03.vcd" 
+	scene "scenes/Player/Mercenary/low/LaughShort04.vcd" 
 }
 Rule PlayerPositiveSoldier
 {

@@ -1,0 +1,610 @@
+// DSP Effects
+// 0 : "Normal (off)"
+// 1 : "Generic"
+// 2 : "Metal Small"
+// 3 : "Metal Medium"
+// 4 : "Metal Large"
+// 5 : "Tunnel Small"
+// 6 : "Tunnel Medium"
+// 7 : "Tunnel Large"
+// 8 : "Chamber Small"
+// 9 : "Chamber Medium"
+// 10: "Chamber Large"
+// 11: "Bright Small"
+// 12: "Bright Medium"
+// 13: "Bright Large"
+// 14: "Water 1"
+// 15: "Water 2"
+// 16: "Water 3"
+// 17: "Concrete Small"
+// 18: "Concrete Medium"
+// 19: "Concrete Large"
+// 20: "Big 1"
+// 21: "Big 2"
+// 22: "Big 3"
+// 23: "Cavern Small"
+// 24: "Cavern Medium"
+// 25: "Cavern Large"
+// 26: "Weirdo 1"
+// 27: "Weirdo 2"
+// 28: "Weirdo 3"
+
+//	ATTN_NONE		0.0f	
+//	ATTN_NORM		0.8f	75dB
+//	ATTN_IDLE		2.0f	60dB
+//	ATTN_STATIC		1.25f	66dB
+//	ATTN_RICOCHET	1.5f	65dB
+//	ATTN_GUNFIRE	0.27f	140dB
+
+//	SNDLVL_50dB		= 50,	// 3.9
+//	SNDLVL_55dB		= 55,	// 3.0
+//	SNDLVL_IDLE		= 60,	// 2.0
+//	SNDLVL_TALKING	= 60,	// 2.0
+//	SNDLVL_60dB		= 60,	// 2.0
+//	SNDLVL_65dB		= 65,	// 1.5
+//	SNDLVL_STATIC	= 66,	// 1.25
+//	SNDLVL_70dB		= 70,	// 1.0
+//	SNDLVL_NORM		= 75,
+//	SNDLVL_75dB		= 75,	// 0.8
+//	SNDLVL_80dB		= 80,	// 0.7
+//	SNDLVL_85dB		= 85,	// 0.6
+//	SNDLVL_90dB		= 90,	// 0.5
+//	SNDLVL_95dB		= 95,
+//	SNDLVL_100dB	= 100,	// 0.4
+//	SNDLVL_105dB	= 105,
+//	SNDLVL_120dB	= 120,
+//	SNDLVL_130dB	= 130,
+//	SNDLVL_GUNFIRE	= 140,	// 0.27
+//	SNDLVL_140dB	= 140,	// 0.2
+//	SNDLVL_150dB	= 150,	// 0.2
+
+"Menu.Background01"
+{
+	"dsp"				"12"
+	"soundmixer"		"MenuSoundscapes_Mix"	
+	
+// Soundscape: Civilian's office from the Double Down short, quiet office ambience with light background cityscape
+
+	"playlooping"
+	{  
+		"volume"		"0.9"
+		"pitch"			"100"
+		"wave"			"ambient/menu/background_office.wav"
+	}		
+	
+	"playlooping"
+	{
+		"volume"		"0.03"
+		"pitch"			"70"
+		"wave"			"scapes/3d/lights_flicker.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"		"0.5"
+		"pitch"			"80"
+		"wave"			"ambient/vip_harbor/harbor_city.wav"
+	}
+	
+	"playrandom"
+	{
+		"time"			"25,60"
+		"volume"		"0.4"
+		"pitch"			"100"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/telephone_antique1.mp3"
+			"wave"		"ambient/menu/telephone_antique2.mp3"
+			"wave"		"ambient/menu/telephone_antique3.mp3"
+			"wave"		"ambient/menu/telephone_antique4.mp3"
+			"wave"		"ambient/menu/tv_chatter1.mp3"
+			"wave"		"ambient/menu/tv_chatter2.mp3"
+			"wave"		"ambient/menu/tv_chatter3.mp3"
+			"wave"		"ambient/menu/intercom1.mp3"
+			"wave"		"ambient/menu/intercom2.mp3"
+			"wave"		"ambient/menu/intercom3.mp3"
+		}
+	}
+
+	"playrandom"
+	{
+		"time"			"20,35"
+		"volume"		"0.1"
+		"pitch"			"85,110"
+		"rndwave"
+		{
+			"wave"		"ambient/cp_harbor/car_1shot_04.wav"
+			"wave"		"ambient/cp_harbor/car_1shot_05.wav"
+			"wave"		"ambient/mvm_warehouse/car_passby_01.wav"
+			"wave"		"ambient/mvm_warehouse/car_passby_02.wav"
+			"wave"		"ambient/mvm_warehouse/car_passby_03.wav"	
+			"wave"		"ambient/mvm_warehouse/car_passby_06.wav"		
+			"wave"		"ambient/mvm_warehouse/car_passby_07.wav"		
+		}
+	}
+			
+	"playrandom"
+	{
+		"time"			"45,70"
+		"volume"		"0.25"
+		"pitch"			"85,100"
+		"rndwave"
+		{
+			"wave"		"scapes/misc/cable_rattle02.wav"
+			"wave"		"scapes/misc/cable_rattle03.wav"
+			"wave"		"scapes/misc/cable_rattle04.wav"	
+			"wave"		"ambient/mvm_warehouse/train_03.wav"	
+			"wave"		"ambient/chopper/helicopter1.mp3"
+			"wave"		"ambient/chopper/helicopter2.mp3"
+			"wave"		"ambient/chopper/helicopter3.mp3"
+		}
+	}
+			
+	"playrandom"
+	{
+		"time"			"35,55"
+		"volume"		"0.08,0.1"
+		"pitch"			"95,105"
+		"rndwave"
+		{
+			"wave"		"ambient/vip_harbor/truck.mp3"
+			"wave"		"ambient/vip_harbor/boat_horn3.mp3"
+			"wave"		"ambient/vip_harbor/boat_horn5.mp3"
+			"wave"		"ambient/vip_harbor/boat_horn6.mp3"
+			"wave"		"ambient/vip_harbor/boat_horn7.mp3"
+			"wave"		"ambient/mvm_warehouse/car_horn_01.wav"
+			"wave"		"ambient/mvm_warehouse/car_horn_02.wav"
+			"wave"		"ambient/mvm_warehouse/car_horn_03.wav"
+			"wave"		"ambient/mvm_warehouse/car_horn_05.wav"
+		}
+	}
+		
+	"playrandom"
+	{
+		"time"			"15,30"
+		"volume"		"0.2,0.4"
+		"pitch"			"100"
+		"rndwave"
+		{		
+			"wave"		"scapes/misc/wind_gust_8.wav"
+			"wave"		"scapes/misc/wind_gust_10.wav"
+			"wave"		"scapes/wind/wind_hit1.wav"
+			"wave"		"scapes/wind/wind_hit2.wav"			
+			"wave"		"scapes/wind/wind_snippet1.wav"
+			"wave"		"scapes/wind/wind_snippet2.wav"
+			"wave"		"scapes/wind/wind_snippet3.wav"
+		}
+	}		
+}
+
+"Menu.Background02"
+{
+	"dsp"				"10"
+	"soundmixer"		"MenuSoundscapes_Mix"	
+	
+// Soundscape: Ambience for BLU's intelligence room - telemetry beeps, transmissions and distant clamor.
+
+	"playlooping"
+	{  
+		"volume"		"1"
+		"pitch"			"100"
+		"wave"			"ambient/menu/background_control_room.wav"
+	}		
+		
+	"playlooping"
+	{  
+		"volume"		"0.5"
+		"pitch"			"100"
+		"wave"			"scapes/ambience/crucial_medroomtone_amb_loop.wav"
+	}		
+	
+	"playrandom"
+	{
+		"time"			"25,60"
+		"volume"		"0.2"	
+		"pitch"			"90,110"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/telemetry_weird1.mp3"
+			"wave"		"ambient/menu/telemetry_weird2.mp3"
+			"wave"		"ambient/menu/telemetry_weird3.mp3"
+			"wave"		"ambient/menu/telemetry_weird4.mp3"
+			"wave"		"ambient/menu/telemetry_weird5.mp3"
+			"wave"		"ambient/menu/telemetry_weird6.mp3"
+		}
+	}
+		
+	"playrandom"
+	{
+		"time"			"60,90"
+		"volume"		"0.15"
+		"pitch"			"85,95"
+		"rndwave"
+		{
+			"wave"		"ambient/chopper/atc_comms1.mp3"
+			"wave"		"ambient/chopper/atc_comms2.mp3"
+			"wave"		"ambient/chopper/atc_comms3.mp3"
+			"wave"		"ambient/chopper/atc_comms4.mp3"
+			"wave"		"ambient/chopper/atc_comms5.mp3"
+		}
+	}
+	
+	"playrandom"
+	{
+		"time"			"15,45"
+		"volume"		"0.4,0.6"
+		"pitch"			"95,105"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/door1.mp3"
+			"wave"		"ambient/menu/door2.mp3"
+			"wave"		"ambient/menu/door3.mp3"
+			"wave"		"ambient/menu/door4.mp3"
+			"wave"		"ambient/menu/door5.mp3"
+			"wave"		"ambient/menu/garbled1.mp3"
+			"wave"		"ambient/menu/garbled2.mp3"
+			"wave"		"ambient/menu/alarm_classic1.mp3"
+			"wave"		"ambient/menu/alarm_classic2.mp3"
+			"wave"		"ambient/menu/buzzer_alarm.mp3"
+			"wave"		"ambient/menu/telephone_antique3.mp3"
+			"wave"		"ambient/vip_harbor/alarm_bell3.mp3"
+			"wave"		"ambient/chopper/buzzer.mp3"
+			"wave"		")ambient_mp3/lair/cap_1_tone_metal_movement3.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement1.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement2.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement3.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement4.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement5.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement6.mp3"
+			"wave"		"scapes/2d/interior1/metalknocking.wav"
+			"wave"		"scapes/2d/interior1/strangesounds22.wav"
+			"wave"		"scapes/2d/interior1/ventfootsteps.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_01.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_02.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_03.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_04.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_05.wav"
+			"wave"		"scapes/misc/random_interiormetal_01.wav"
+			"wave"		"scapes/misc/random_interiormetal_02.wav"
+			"wave"		"scapes/misc/random_interiormetal_03.wav"
+			"wave"		"scapes/misc/random_interiormetal_04.wav"
+			"wave"		"scapes/misc/random_interiormetal_05.wav"
+			"wave"		"scapes/misc/random_interiormetal_06.wav"
+			"wave"		"scapes/misc/random_interiormetal_07.wav"
+		}
+	}
+		
+	"playrandom"
+	{
+		"time"			"45,60"
+		"volume"		"0.35,0.5"
+		"pitch"			"80,95"
+		"rndwave"
+		{		
+			"wave"		"scapes/wind/wind_snippet1.wav"
+			"wave"		"scapes/wind/wind_snippet2.wav"
+		}
+	}		
+}
+
+"Menu.Background03"
+{
+	"dsp"				"13"
+	"soundmixer"		"MenuSoundscapes_Mix"	
+	
+// Soundscape: RED command center, with various computer and server ambience.
+
+	"playlooping"
+	{  
+		"volume"		"1"
+		"pitch"			"100"
+		"wave"			"ambient/menu/background_radar.wav"
+	}		
+			
+	"playlooping"
+	{  
+		"volume"		"1"
+		"pitch"			"100"
+		"wave"			"ambient/menu/radar_ping.wav"
+	}		
+		
+	"playlooping"
+	{  
+		"volume"		"0.03"
+		"pitch"			"100"
+		"wave"			"ambient/levels/labs/equipment_beep_loop1.wav"
+	}		
+	
+	"playrandom"
+	{
+		"time"			"15,30"
+		"volume"		"0.4,0.5"
+		"pitch"			"98,102"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/computer_tape_short1.mp3"
+			"wave"		"ambient/menu/computer_tape_short2.mp3"
+			"wave"		"ambient/menu/computer_tape_short3.mp3"
+			"wave"		"ambient/menu/computer_tape_short4.mp3"
+			"wave"		"ambient/menu/computer_tape_short5.mp3"
+			"wave"		"ambient/menu/computer_tape_short6.mp3"
+			"wave"		"ambient/menu/computer_misc1.mp3"
+			"wave"		"ambient/menu/computer_misc2.mp3"
+			"wave"		"ambient/menu/computer_misc3.mp3"
+			"wave"		"ambient/menu/computer_misc4.mp3"
+			"wave"		"ambient/menu/computer_misc5.mp3"
+			"wave"		"ambient/menu/computer_beeps1.mp3"
+			"wave"		"ambient/menu/computer_beeps2.mp3"
+			"wave"		"ambient/menu/computer_beeps3.mp3"
+			"wave"		"ambient/menu/computer_beeps4.mp3"			
+		}
+	}
+
+	"playrandom"
+	{
+		"time"			"20,40"
+		"volume"		"0.8,1.0"
+		"pitch"			"100"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/panned_clicks1.mp3"
+			"wave"		"ambient/menu/panned_clicks2.mp3"
+			"wave"		"ambient/menu/panned_clicks3.mp3"
+			"wave"		"ambient/menu/panned_clicks4.mp3"
+		}
+	}
+
+	"playrandom"
+	{
+		"time"			"15,45"
+		"volume"		"0.5,0.75"
+		"pitch"			"75"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/door1.mp3"
+			"wave"		"ambient/menu/door2.mp3"
+			"wave"		"ambient/menu/door3.mp3"
+			"wave"		"ambient/menu/door4.mp3"
+			"wave"		"ambient/menu/door5.mp3"
+			"wave"		"ambient/levels/streetwar/marching_distant1.wav"
+			"wave"		"ambient/levels/streetwar/marching_distant2.wav"
+			"wave"		")ambient_mp3/lair/cap_1_tone_metal_movement3.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement1.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement2.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement3.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement4.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement5.mp3"
+			"wave"		")ambient_mp3/lair/cap_3_tone_metal_movement6.mp3"
+			"wave"		"scapes/2d/interior1/metalknocking.wav"
+			"wave"		"scapes/2d/interior1/strangesounds22.wav"
+			"wave"		"scapes/2d/interior1/ventfootsteps.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_04.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_05.wav"
+			"wave"		"scapes/misc/random_interiormetal_03.wav"
+			"wave"		"scapes/misc/random_interiormetal_04.wav"
+			"wave"		"scapes/misc/random_interiormetal_05.wav"
+			"wave"		"scapes/misc/random_interiormetal_06.wav"
+			"wave"		"scapes/misc/random_interiormetal_07.wav"
+		}
+	}	
+}
+
+"Menu.Background04"
+{
+	"dsp"				"18"
+	"soundmixer"		"MenuSoundscapes_Mix"	
+	
+// Soundscape: Sparse spytech observation room ambience, with the sound of a running tape recorder.
+
+	"playlooping"
+	{  
+		"volume"		"0.75"
+		"pitch"			"100"
+		"wave"			"ambient/menu/background_tape.wav"
+	}		
+		
+	"playlooping"
+	{  
+		"volume"		"0.25"
+		"pitch"			"100"
+		"wave"			"ambient/indoors.wav"
+	}		
+
+	"playrandom"
+	{
+		"time"			"15,30"
+		"volume"		"0.35"	
+		"pitch"			"98,102"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/fluorescent_flicker1.mp3"
+			"wave"		"ambient/menu/fluorescent_flicker2.mp3"
+			"wave"		"ambient/menu/fluorescent_flicker3.mp3"
+			"wave"		"ambient/menu/fluorescent_flicker4.mp3"
+			"wave"		"ambient/menu/computer_tape_short1.mp3"
+			"wave"		"ambient/menu/computer_tape_short2.mp3"
+			"wave"		"ambient/menu/computer_tape_short3.mp3"
+			"wave"		"ambient/menu/computer_tape_short4.mp3"
+			"wave"		"ambient/menu/computer_tape_short5.mp3"
+		}
+	}	
+	
+	"playrandom"
+	{
+		"time"			"30,60"
+		"volume"		"0.5,0.75"
+		"pitch"			"97,103"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/door1.mp3"
+			"wave"		"ambient/menu/door2.mp3"
+			"wave"		"ambient/menu/door3.mp3"
+			"wave"		"ambient/menu/door4.mp3"
+			"wave"		"ambient/menu/door5.mp3"
+			"wave"		"ambient/menu/conversation1.mp3"
+			"wave"		"ambient/menu/conversation2.mp3"
+		}
+	}
+
+	"playrandom"
+	{
+		"time"			"15,45"
+		"volume"		"0.15,0.35"
+		"pitch"			"70"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/alarm_classic1.mp3"
+			"wave"		"ambient/menu/alarm_classic2.mp3"
+			"wave"		"ambient/menu/buzzer_alarm.mp3"
+			"wave"		"scapes/2d/random_amb/metalrattle_01.wav"
+			"wave"		"scapes/2d/random_amb/metalrattle_02.wav"
+			"wave"		"scapes/2d/random_amb/metalrattle_03.wav"
+			"wave"		"scapes/2d/random_amb/metalrattle_04.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_01.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_02.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_03.wav"
+			"wave"		"scapes/misc/metal_str1.wav"
+			"wave"		"scapes/misc/metal_str4.wav"
+			"wave"		"scapes/misc/metal_str5.wav"
+			"wave"		"scapes/misc/randommetalsqueak02.wav"
+			"wave"		"scapes/misc/random_interiormetal_03.wav"
+			"wave"		"scapes/misc/random_interiormetal_05.wav"
+			"wave"		"scapes/misc/random_interiormetal_07.wav"
+		}
+	}
+
+	"playrandom"
+	{
+		"time"			"45,60"
+		"volume"		"0.2"
+		"pitch"			"105,110"
+		"rndwave"
+		{		
+			"wave"		"scapes/wind/wind_snippet1.wav"
+			"wave"		"scapes/wind/wind_snippet2.wav"
+		}
+	}	
+}
+
+"Menu.Background05"
+{
+	"dsp"				"9"
+	"soundmixer"		"MenuSoundscapes_Mix"	
+	
+// Soundscape: Locker room ambience with an ominous sounding fan. Leather club ambience is two soundscapes down
+
+	"playlooping"
+	{  
+		"volume"		"0.75"
+		"pitch"			"100"
+		"wave"			"ambient/menu/background_lockers.wav"
+	}			
+	
+	"playlooping"
+	{  
+		"volume"		"0.75"
+		"pitch"			"100"
+		"wave"			"ambient/menu/locker_room_fan.wav"
+	}		
+		
+	"playlooping"
+	{  
+		"volume"		"0.03"
+		"pitch"			"80"
+		"wave"			"ambient/lair/ac_vent2.wav"
+	}		
+			
+	"playlooping"
+	{  
+		"volume"		"0.85"
+		"pitch"			"80"
+		"wave"			"ambient/lair/spawn_tone2.wav"
+	}		
+		
+	"playrandom"
+	{
+		"time"			"90,180"
+		"volume"		"0.15,0.35"	
+		"pitch"			"95,105"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/toilet1.mp3"
+			"wave"		"ambient/menu/toilet2.mp3"
+			"wave"		"ambient/menu/toilet3.mp3"
+			"wave"		"ambient/menu/toilet4.mp3"
+		}
+	}		
+	
+	// It's recommended to wash your hands longer than this
+	
+	"playrandom"
+	{
+		"time"			"60,120"
+		"volume"		"0.3"	
+		"pitch"			"95,105"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/sink1.mp3"
+			"wave"		"ambient/menu/sink2.mp3"
+		}
+	}		
+
+	"playrandom"
+	{
+		"time"			"15,45"
+		"volume"		"0.15,0.35"
+		"pitch"			"100"
+		"rndwave"
+		{
+			"wave"		"ambient/menu/door1.mp3"
+			"wave"		"ambient/menu/door2.mp3"
+			"wave"		"ambient/menu/door3.mp3"
+			"wave"		"ambient/menu/door4.mp3"
+			"wave"		"ambient/menu/door5.mp3"
+			"wave"		"ambient_mp3/lair/jungle_underground_steam.mp3"
+			"wave"		")scapes/2d/exterior1/disquiet01.wav"
+			"wave"		")scapes/2d/exterior1/disquiet02.wav"
+			"wave"		")scapes/2d/exterior1/disquiet03.wav"
+			"wave"		"scapes/2d/random_amb/metalrattle01.wav"
+			"wave"		"scapes/2d/random_amb/metalrattle02.wav"
+			"wave"		"scapes/2d/random_amb/metalrattle03.wav"
+			"wave"		"scapes/2d/random_amb/metalrattle04.wav"
+			"wave"		"scapes/2d/random_amb/interior_random_01.wav"
+			"wave"		"scapes/2d/random_amb/interior_random_03.wav"
+			"wave"		"scapes/2d/random_amb/interior_random_04.wav"
+			"wave"		"scapes/2d/random_amb/interior_random_05.wav"
+			"wave"		"scapes/2d/random_amb/interior_random_07.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_02.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_03.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_04.wav"
+			"wave"		"scapes/2d/random_amb/interior_metalmoan_05.wav"
+			"wave"		")scapes/2d/random_amb/random_lo_end_01.wav"
+			"wave"		")scapes/2d/random_amb/random_lo_end_02.wav"
+			"wave"		")scapes/2d/random_amb/random_lo_end_03.wav"
+			"wave"		")scapes/2d/random_amb/random_lo_end_04.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand1.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand4.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand5.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand6.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand7.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand8.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand9.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand10.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand11.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand12.wav"
+			"wave"		")scapes/2d/random_amb/sewer_rand13.wav"
+			"wave"		"scapes/misc/metal_str1.wav"
+			"wave"		"scapes/misc/metal_str2.wav"
+			"wave"		"scapes/misc/metal_str3.wav"
+			"wave"		"scapes/misc/metal_str4.wav"
+			"wave"		"scapes/misc/metal_str5.wav"
+			"wave"		"scapes/misc/randommetalsqueak01.wav"
+			"wave"		"scapes/misc/randommetalsqueak02.wav"
+			"wave"		"scapes/misc/random_interiormetal_03.wav"
+			"wave"		"scapes/misc/random_interiormetal_04.wav"
+			"wave"		"scapes/misc/random_interiormetal_05.wav"
+			"wave"		"scapes/misc/random_interiormetal_06.wav"
+			"wave"		"scapes/misc/random_interiormetal_07.wav"
+		}
+	}	
+}
