@@ -42,6 +42,16 @@
 					"value"				"2.5"
 				}
 			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_bond.vcd"
+					}
+				}
+			}
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_PistolDM.Single"
@@ -93,6 +103,16 @@
 				}
 				
 			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_groovy.vcd"
+					}
+				}
+			}
 			"static_attrs"
 			{
 				"min_viewmodel_offset"	"10 0 -10"	
@@ -143,6 +163,16 @@
 				{
 					"attribute_class"	"mult_reload_time_hidden"
 					"value"				"0.8"
+				}
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_soclose.vcd"
+					}
 				}
 			}
 			"visuals"
@@ -217,6 +247,21 @@
 					"attribute_class"	"mult_spread_scale"
 					"value"				"0.5"
 				}
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_deadmeat.vcd"
+					}
+				}
 			}
 			"visuals"
 			{
@@ -282,6 +327,16 @@
 					"value"				"0.8"
 				}
 			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_bond.vcd"
+					}
+				}
+			}
 			"visuals"
 			{
 			"sound_single_shot"		"Weapon_RevolverDM.Single"
@@ -292,18 +347,399 @@
 			"image_inventory"		"backpack/weapons/w_models/w_shotgun"
 			"mouse_pressed_sound"	"ui/item_light_gun_pickup.wav"
 			"drop_sound"			"ui/item_light_gun_drop.wav"
+		}
+	        "1005"
+		{
+			"name"						"OF_WEAPON_ROCKETLAUNCHER"
+			"item_class"				"tf_weapon_rocketlauncher"
+			"item_slot"					"primary"
+			"bucket"					"0"
+			"show_in_armory"			"1"
+			"propername"				"0"
+			"item_name"					"#TF_Weapon_RocketLauncher"
+			"item_type_name"			"#TF_Weapon_RocketLauncher"
+			"item_description"			"Go ahead, make my day"
+			"anim_slot"					"primary"
+			"model_player"				"models/weapons/v_models/v_rocketlauncher_dm.mdl"
+			"model_world"				"models/weapons/w_models/w_rocketlauncher_dm.mdl"
+			"attach_to_hands"			"2"
+			"item_quality"				"normal"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"	
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_knuckles.vcd"
+					}
+				}
+			}
+			"attributes"
+			{
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"1"
+				}
+				"reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"				"1"
+				}
+				"Blast radius decreased"
+				{
+					"attribute_class"	"mult_explosion_radius"
+					"value"				"0.75"
+				}
+				"blast dmg to self decreased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"				"0.75"
+				}
+			}
+			"visuals"
+			{
+			"sound_single_shot"		"Weapon_QuakeRPG.Single"
+			"sound_burst"			"Weapon_QuakeRPG.SingleCrit"
+			"sound_reload"			"Weapon_QuakeRPG.WorldReload"
+			"sound_draw"			"Weapon_QuakeRPG.Draw"
+			}
+			"image_inventory"		"backpack/weapons/w_models/w_rocketlauncher"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+		}
+	        "1006"
+		{
+			"name"						"OF_WEAPON_GRENADELAUNCHER"
+			"item_class"				"tf_weapon_grenadelauncher"
+			"item_slot"					"primary"
+			"bucket"					"0"
+			"show_in_armory"			"1"
+			"propername"				"0"
+			"item_name"					"#TF_Weapon_GrenadeLauncher"
+			"item_type_name"			"#TF_Weapon_GrenadeLauncher"
+			"item_description"			"Go ahead, make my day"
+			"anim_slot"					"primary"
+			"model_player"				"models/weapons/v_models/v_grenadelauncher_dm.mdl"
+			"model_world"				"models/weapons/w_models/w_grenadelauncher_dm.mdl"
+			"attach_to_hands"			"2"
+			"item_quality"				"normal"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"	
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_knuckles.vcd"
+					}
+				}
+			}
+			"attributes"
+			{
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"1"
+				}
+				"reload time increased hidden"
+				{
+					"attribute_class"	"mult_reload_time_hidden"
+					"value"				"0.75"
+				}
+				"fuse bonus"
+				{
+					"attribute_class"	"fuse_mult"
+					"value"				"0.75"
+				}
+			}
+			"visuals"
+			{
+			"sound_single_shot"		"Weapon_GrenadeLauncherDM.Single"
+			"sound_burst"			"Weapon_GrenadeLauncherDM.SingleCrit"
+			"sound_reload"			"Weapon_GrenadeLauncherDM.WorldReload"
+			"sound_draw"			"Weapon_GrenadeLauncherDM.Cock_Back"
+			}
+			"image_inventory"		"backpack/weapons/w_models/w_grenadelauncher"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
+		}
+	        "1007"
+		{
+			"name"						"OF_WEAPON_TOMMYGUN"
+			"item_logname"				"tommygun"
+			"item_iconname"				"tommygun"
+			"item_class"				"tf_weapon_smg"
+			"item_slot"					"primary"
+			"bucket"					"0"
+			"show_in_armory"			"1"
+			"propername"				"0"
+			"item_name"					"Tommygun"
+			"item_type_name"			"#TF_Weapon_SMG"
+			"item_description"			"Burst Action"
+			"anim_slot"					"primary"
+			"model_world"				"models/weapons/w_models/w_tommygun.mdl"
+			"model_player"				"models/weapons/v_models/v_tommygun_merc.mdl"
+			"attach_to_hands"			"2"
+			"item_quality"				"normal"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"	
+			}
+			"attributes"
+			{
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"				"50"
+				}
+				"maxammo primary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"1.33"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.85"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.5"
+				}
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"1"
+				}
+			}
+			"visuals"
+			{
+			"sound_single_shot"		"Weapon_Tommygun.Single"
+			"sound_burst"			"Weapon_Tommygun.SingleCrit"
+			"sound_reload"			"Weapon_TommyGun.WorldReload"
+			"sound_draw"			"Weapon_Tommmygun.BoltBack"
+			}
+			"image_inventory"		"backpack/weapons/w_models/w_smg"
+			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
+			"drop_sound"			"ui/item_medium_gun_drop.wav"
+		}
+	        "1008"
+		{
+			"name"						"OF_WEAPON_SMG"
+			"item_logname"				"smg"
+			"item_iconname"				"smg"
+			"item_class"				"tf_weapon_pistol_scout"
+			"item_slot"					"secondary"
+			"show_in_armory"			"1"
+			"propername"				"0"
+			"item_name"					"Combat SMG"
+			"item_type_name"			"#TF_Weapon_SMG"
+			"item_description"			"Burst Action"
+			"anim_slot"					"secondary"
+			"model_world"				"models/weapons/w_models/w_smg_dm.mdl"
+			"model_player"				"models/weapons/v_models/v_smg_dm.mdl"
+			"attach_to_hands"			"2"
+			"item_quality"				"normal"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"	
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_knuckles.vcd"
+					}
+				}
+			}
+			"attributes"
+			{
+				"mod max primary clip override"
+				{
+					"attribute_class"	"mod_max_primary_clip_override"
+					"value"				"25"
+				}
+				"maxammo secondary increased"
+				{
+					"attribute_class"	"mult_maxammo_primary"
+					"value"				"2.09"
+				}
+				"fire rate penalty HIDDEN"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.8"
+				}
+				"damage bonus HIDDEN"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.2"
+				}
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"2"
+				}
+			}
+			"visuals"
+			{
+			"sound_single_shot"		"Weapon_SMG_DM.Single"
+			"sound_burst"			"Weapon_SMG_DM.SingleCrit"
+			"sound_reload"			"Weapon_SMG_DM.WorldReload"
+			"sound_draw"			"Weapon_SMG_DM.BoltBack"
+			}
+			"image_inventory"		"backpack/weapons/w_models/w_smg"
+			"mouse_pressed_sound"	"ui/item_medium_gun_pickup.wav"
+			"drop_sound"			"ui/item_medium_gun_drop.wav"
+		}
+	        "1009"
+		{
+			"name"						"OF_WEAPON_BOUNCER"
+			"item_class"				"tf_weapon_grenadelauncher"
+			"item_slot"					"primary"
+			"bucket"					"0"
+			"show_in_armory"			"1"
+			"propername"				"0"
+			"item_name"					"Bouncer"
+			"item_type_name"			"#TF_Weapon_GrenadeLauncher"
+			"item_description"			"Go ahead, make my day"
+			"anim_slot"					"primary"
+			"model_player"				"models/weapons/v_models/v_bouncer.mdl"
+			"model_world"				"models/weapons/w_models/w_bouncer.mdl"
+			"attach_to_hands"			"2"
+			"item_quality"				"normal"
+			"used_by_classes"
+			{
+				"soldier"				"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"	"10 0 -10"	
+			}
+			"attributes"
+			{
+				"mod use custom ammo type"
+				{
+					"attribute_class"	"mod_use_custom_ammo_type"
+					"value"				"1"
+				}
+				"override projectile type"				{"value"	"2"}	
+				
+				"Projectile speed decreased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"0.75"
+				}
+				
+				"set rocket detonate mode"
+				{
+					"attribute_class"	"set_rocket_detonate_mode"
+					"value"				"2"
+				}
+				
+				"rocket gravity"
+				{
+					"attribute_class"	"mod_rocket_gravity"
+					"value"				"1"
+				}
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_grenade_grenadelauncher.mdl"
+				}
+				
+			}
+			"taunt"
+			{
+				"custom_taunt_scene_per_class"
+				{
+					"Soldier"
+					{
+						"1"				"scenes/player/mercenary/low/taunt_knuckles.vcd"
+					}
+				}
+			}
+			"visuals"
+			{
+			"sound_single_shot"		"Weapon_GrenadeLauncherDM.Single"
+			"sound_burst"			"Weapon_GrenadeLauncherDM.SingleCrit"
+			"sound_reload"			"Weapon_GrenadeLauncherDM.WorldReload"
+			"sound_draw"			"Weapon_GrenadeLauncherDM.Cock_Back"
 
+			}
+			"visuals_red"
+			{
+				"use_visualsblock_as_base"	"visuals"
+				"muzzle_flash"			"muzzle_pipelauncher"
+				"trail_effect"			"pipebombtrail_red"
+				"trail_effect_crit"		"critical_pipe_red"
+			}
+			"visuals_blu"
+			{
+				"use_visualsblock_as_base"	"visuals"
+				"muzzle_flash"			"muzzle_pipelauncher"
+				"trail_effect"			"pipebombtrail_blue"
+				"trail_effect_crit"		"critical_pipe_blue"
+			}
+			"visuals_grn"
+			{
+				"use_visualsblock_as_base"	"visuals"
+				"muzzle_flash"			"muzzle_pipelauncher"
+				"trail_effect"			"pipebombtrail_green"
+				"trail_effect_crit"		"critical_pipe_green"
+			}
+			"visuals_ylw"
+			{
+				"use_visualsblock_as_base"	"visuals"
+				"muzzle_flash"			"muzzle_pipelauncher"
+				"trail_effect"			"pipebombtrail_yellow"
+				"trail_effect_crit"		"critical_pipe_yellow"
+			}
+			"image_inventory"		"backpack/weapons/w_models/w_grenadelauncher"
+			"mouse_pressed_sound"	"ui/item_heavy_gun_pickup.wav"
+			"drop_sound"			"ui/item_heavy_gun_drop.wav"
 		}
 	}
 	"attributes"
 	{
 		"6000"
 		{
-			"name"						"damage override"
-			"attribute_class"			"mult_dmg"
-			"description_string"		"#Attrib_DamageDone_Negative"
-			"description_format"		"value_is_additive"
-			"hidden"					"0"
+			"name"						"blast dmg to self decreased"
+			"attribute_class"			"blast_dmg_to_self"
+			"description_string"		"#Attrib_BlastDamageToSelf_Decreased"
+			"description_format"		"value_is_percentage"
+			"hidden"		"0"
 			"effect_type"				"positive"
 			"stored_as_integer"			"0"
 		}

@@ -9,5 +9,7 @@ function GetModName()
 {
 	return Mapbase.GetModName()
 }
-
+IncludeScript("merc_model");
 IncludeScript("jump_think");
+
+
